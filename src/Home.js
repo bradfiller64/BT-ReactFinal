@@ -11,7 +11,7 @@ function Home() {
             <Navbar bg='dark' variant='dark'>
                 <Container>
                     <img style={{ width: 50, height: 50 }} src={Logo} alt="logo" />
-                    <h3 id="LoFi">LoFi Games</h3>
+                    <h4 id="LoFi">LoFi Games</h4>
                     <Nav className='me-auto'>
                         <Link to='/' className='nav-link'>
                             Home

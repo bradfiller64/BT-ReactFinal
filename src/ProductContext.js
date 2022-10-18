@@ -1,10 +1,12 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
+export const ProductContext = createContext();
+
 export const ProductProvider = (props) => {
     const url = 'http://localhost:3001/products';
 
-    const [products, setPRoducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         async function getProducts() {
@@ -15,7 +17,7 @@ export const ProductProvider = (props) => {
 
     async function refreshProducts() {
         const response = await axios.get(`${url}`);
-        setPRoducts(response.data);
+        setProducts(response.data);
     }
 
     async function getProduct(id) {
@@ -31,6 +33,14 @@ export const ProductProvider = (props) => {
 
     async function addProduct(product) {
         const response = await axios.post(`${url}`,
+            product
+        );
+        refreshProducts();
+        return await new Promise((resolve) => resolve(response.data));
+    }
+
+    async function updateProduct(product) {
+        const response = await axios.put(`${url}/${product.id}`,
             product
         );
         refreshProducts();

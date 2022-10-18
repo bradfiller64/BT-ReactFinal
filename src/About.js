@@ -3,12 +3,11 @@ import './About.css'
 
 function About() {
     return (
-        <div id="wrapper">
-            <div id="image">
-                <img src={AboutPic} alt="about" />
-            </div>
-            <div id="content">
-                <br></br>
+        <div id="container">
+            <div id="image" class='col-4'>
+                < img src={AboutPic} alt="about" />
+            </div >
+            <div id="content" class='col-5'>
                 <h1>Life is better with Games!</h1>
                 <p>Glitch broken Driving simulator epistle SNES cut-scene frame Party game pervasive game GUI. First-party developer AA hyperspace class Own Pwn end user slow-down.
                     Microsoft 32-bit QQ MLG frag AI animation cancel Frogger AI kick Total War Red Dead Redemption 2. Capture the flag speedrun GameBattles OHKO anti-aliasing
@@ -21,7 +20,7 @@ function About() {
                     simulation shmups Halo 2 Sega Genesis. RTS beta Pokemon Perfect Dark damage per second Pac-Man. Super Smash Bros. combo fps ragequit
                     stats difficulty MMORPG first-person Spyro unlimited ammo Naruto Ultimate Ninja Storm.</p>
             </div>
-        </div>
+        </div >
     )
 };
 
