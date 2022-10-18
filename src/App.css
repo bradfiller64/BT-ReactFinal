@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    color: rgb(98, 255, 98);
+}
