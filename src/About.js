@@ -5,7 +5,7 @@ function About() {
     return (
         <div id="container">
             <div id="image" class='col-4'>
-                < img src={AboutPic} alt="about" />
+                < img id="aboutPic" src={AboutPic} alt="about" />
             </div >
             <div id="content" class='col-5'>
                 <h1>Life is better with Games!</h1>

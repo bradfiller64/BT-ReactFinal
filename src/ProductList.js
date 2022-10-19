@@ -40,7 +40,13 @@ function ProductList(props) {
                     <Card.Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </Card.Text>
-                    <Button variant="primary">Click Here</Button>
+                    <Button variant="primary">View</Button>
+                    <Link to={`/products/${id}/edit`} className='btn btn-primary mx-3'>
+                        Edit
+                    </Link>
+                    <Button variant='danger' onClick={handleDeleteContact.bind(this, id)}>
+                        Delete
+                    </Button>
                 </Card.Body>
             </Card>
         </>
