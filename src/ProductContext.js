@@ -28,7 +28,8 @@ export const ProductProvider = (props) => {
 
     async function deleteProduct(id) {
         const result = await axios.delete(`${url}/${id}`)
-        return refreshProducts(result);
+        refreshProducts();
+        return result
     }
 
     async function addProduct(product) {
@@ -61,3 +62,5 @@ export const ProductProvider = (props) => {
         </ProductContext.Provider>
     );
 };
+
+export default ProductContext;

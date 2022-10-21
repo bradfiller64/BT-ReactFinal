@@ -7,7 +7,7 @@ function About() {
             <div id="image" class='col-4'>
                 < img id="aboutPic" src={AboutPic} alt="about" />
             </div >
-            <div id="content" class='col-5'>
+            <div id="content" class='col-4'>
                 <h1>Life is better with Games!</h1>
                 <br></br>
                 <p>Glitch broken Driving simulator epistle SNES cut-scene frame Party game pervasive game GUI. First-party developer AA hyperspace class Own Pwn end user slow-down.
