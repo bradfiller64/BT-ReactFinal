@@ -1,5 +1,5 @@
 import AboutPic from './images/about.jpg'
-import './About.css'
+import './styles/About.css'
 
 function About() {
     return (
@@ -9,6 +9,7 @@ function About() {
             </div >
             <div id="content" class='col-5'>
                 <h1>Life is better with Games!</h1>
+                <br></br>
                 <p>Glitch broken Driving simulator epistle SNES cut-scene frame Party game pervasive game GUI. First-party developer AA hyperspace class Own Pwn end user slow-down.
                     Microsoft 32-bit QQ MLG frag AI animation cancel Frogger AI kick Total War Red Dead Redemption 2. Capture the flag speedrun GameBattles OHKO anti-aliasing
                     influencer marketing model knock-back Action/Adventure. First-person Gamecube technology tree HUD survival game Healer Gameboy boosting Tomb Raider.

@@ -1,11 +1,8 @@
-import React from 'react';
-import products from './db.js'
+import React from "react"
 import ProductCard from './ProductCard';
+import products from './db.js'
 
-import './styles/ProductList.css'
-
-
-function ProductList() {
+function Welcome() {
     return (
         <div>
             <h1>Products</h1>
@@ -18,4 +15,4 @@ function ProductList() {
     )
 };
 
-export default ProductList;
+export default Welcome

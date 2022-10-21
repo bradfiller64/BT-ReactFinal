@@ -11,18 +11,73 @@ function CreateProduct() {
         productName: '',
         description: '',
         price: 0,
-        imageURL: '',
-        condition: ''
     });
 
-    let { id,
-        productName,
-        description,
-        price,
-        imageURL,
-        condition } = product;
-
     let { getProduct, addProduct, updateProduct } = useContext(ProductContext);
+
     let navigate = useNavigate();
+
+    let { id, productName, description, price } = product;
+
+    useEffect(() => {
+        if (id === undefined) return;
+        async function fetch() {
+            await getProduct(id).then((product) => setProduct(product));
+        }
+        fetch();
+    }, [id]);
+
+    function handleChange(event) {
+        setProduct((preValue) => {
+            return { ...preValue, [event.target.name]: event.target.value };
+        });
+    }
+
+    function addOrUpdate() {
+        if (id === undefined) {
+            return addProduct(product);
+        } else {
+            return updateProduct(product);
+        }
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        addOrUpdate().then((product) => navigate(`/products/${product.id}`));
+    }
+
+    return (
+        <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+                <Form.Label>Product Name</Form.Label>
+                <Form.Control
+                    type="text"
+                    name="productName"
+                    value={productName}
+                    onChange={handleChange}
+                />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Description</Form.Label>
+                <Form.Control
+                    type="text"
+                    name="description"
+                    value={description}
+                    onChange={handleChange}
+                />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Price</Form.Label>
+                <Form.Control
+                    type="number"
+                    name="price"
+                    value={price}
+                    onChange={handleChange}
+                />
+            </Form.Group>
+            <Button type="submit">Save</Button>
+        </Form>
+    );
 }
+
 export default CreateProduct;

@@ -6,9 +6,9 @@ import { ProductProvider } from './ProductContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProductProvider>
-      <App />
-    </ProductProvider>
+
+    <App />
+
   </React.StrictMode>,
   document.getElementById('root')
 );
