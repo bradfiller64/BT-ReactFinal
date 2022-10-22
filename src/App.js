@@ -4,7 +4,6 @@ import Home from './Home.js';
 import About from './About.js';
 import Welcome from './Welcome.js'
 import ProductList from './ProductList.js';
-import ProductCard from './ProductCard.js'
 import OneProduct from './OneProduct.js';
 import CreateProduct from './CreateProduct.js';
 import './styles/App.css'
@@ -18,11 +17,10 @@ function App() {
           <Route path="/" element={<Home />}>
             <Route index element={<Welcome />} />
             <Route path="/about" element={<About />} />
-            <Route path="/products" element={<ProductList />}>
-              <Route path=":id" element={<OneProduct />} />
-              <Route path="/create-product" element={<CreateProduct />} />
-              <Route path="/update/:id" element={<CreateProduct />} />
-            </Route>
+            <Route path="/products" element={<ProductList />} />
+            <Route path=":id" element={<OneProduct />} />
+            <Route path="/create-product" element={<CreateProduct />} />
+            <Route path="/update/:id" element={<CreateProduct />} />
           </Route>
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>

@@ -4,10 +4,10 @@ import './styles/About.css'
 function About() {
     return (
         <div id="container">
-            <div id="image" class='col-4'>
+            <div id="image" >
                 < img id="aboutPic" src={AboutPic} alt="about" />
             </div >
-            <div id="content" class='col-4'>
+            <div id="content" >
                 <h1>Life is better with Games!</h1>
                 <br></br>
                 <p>Glitch broken Driving simulator epistle SNES cut-scene frame Party game pervasive game GUI. First-party developer AA hyperspace class Own Pwn end user slow-down.

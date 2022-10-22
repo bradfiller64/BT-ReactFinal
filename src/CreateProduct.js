@@ -60,7 +60,7 @@ function CreateProduct() {
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3">
                         <Form.Label>Product Name</Form.Label>
-                        <Form.Control
+                        <Form.Control style={{ width: "400px", margin: "auto" }}
                             type="text"
                             name="productName"
                             value={productName}
@@ -69,7 +69,7 @@ function CreateProduct() {
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label>Description</Form.Label>
-                        <Form.Control
+                        <Form.Control style={{ width: "400px", margin: "auto" }}
                             type="text"
                             name="description"
                             value={description}
@@ -78,7 +78,7 @@ function CreateProduct() {
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label>Price</Form.Label>
-                        <Form.Control
+                        <Form.Control style={{ width: "400px", margin: "auto" }}
                             type="number"
                             name="price"
                             value={price}
@@ -86,8 +86,8 @@ function CreateProduct() {
                         />
                     </Form.Group>
                     <Form.Group className="mb-3">
-                        <Form.Label>Price</Form.Label>
-                        <Form.Control
+                        <Form.Label>Image URL</Form.Label>
+                        <Form.Control style={{ width: "400px", margin: "auto" }}
                             type="text"
                             name="imageURL"
                             value={imageURL}
@@ -95,19 +95,17 @@ function CreateProduct() {
                         />
                     </Form.Group>
                     <Form.Group className="mb-3">
-                        <Form.Label>Price</Form.Label>
-                        <Form.Control
-                            type="condition"
-                            name="condition"
-                            value={condition}
-                            onChange={handleChange}
+                        <Form.Label>Condition</Form.Label>
+                        <Form.Select style={{ width: "400px", margin: "auto" }} onChange={handleCondition}
+                            aria-label="Is this product used?"
+
+
                         />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                        <Form.Select onChange={handleCondition}
-                            aria-label="Is this product new or used?"
-                        />
-                        <option>Open this select menu</option>
+
+                        <option>Select Option</option>
+                        <option value={true}>Yes</option>
+                        <option value={false}>No</option>
+
                     </Form.Group>
                     <Button type="submit">Save</Button>
                 </Form>

@@ -3,6 +3,9 @@ import { Card, Button, Spinner, Alert } from 'react-bootstrap'
 import { useParams, useNavigate, Link } from "react-router-dom"
 import ProductContext from './ProductContext.js'
 
+import './styles/OneProduct.css'
+
+
 function OneProduct() {
 
     let params = useParams();
@@ -27,6 +30,11 @@ function OneProduct() {
         fetch();
     }, [params.productId, getProduct]);
 
+    function handleDeleteProduct(id) {
+        deleteProduct(id);
+        navigate('/products');
+    }
+
     function loading() {
         return (
             <div className='w-25 text-center'>
@@ -48,25 +56,27 @@ function OneProduct() {
         return (
 
             <Card className="align-self=start w-25">
-                <Card.Img variant="top" src={product.imageURL} />
+                <Card.Img variant="top" src={imageURL} />
                 <Card.Body>
-                    <Card.Title>{product.productName}</Card.Title>
+                    <Card.Title>{productName}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">
-                        <span style={{ color: "white" }}>${product.price}</span>
+                        <span style={{ color: "white" }}>${price}</span>
                     </Card.Subtitle>
                     <br></br>
                     <Card.Text>
-                        <strong>Description:</strong> <span style={{ color: "white" }}>{product.description}</span>
+                        <strong>Description:</strong> <span style={{ color: "white" }}>{description}</span>
                     </Card.Text>
                     <Card.Text>
                         <br></br>
-                        <strong>Condition:</strong> <span style={{ color: "white" }}>{product.condition}</span>
+                        <strong>Condition:</strong> <span style={{ color: "white" }}>{condition}</span>
                     </Card.Text>
-                    <Button variant="secondary">View</Button>
-                    <Button variant="primary" style={{ margin: '10px' }}>
+                    <Link to={`/products/${id}/edit`} className='btn btn-primary mx-3'>
                         Edit
-                    </Button>
-                    <Button variant="danger">Delete</Button>
+                    </Link>
+                    <Link to={`/products/${id}`} className='btn btn-secondary mx-3'>
+                        View
+                    </Link>
+                    <Button variant='danger' onClick={handleDeleteProduct.bind(this, id)}>Delete</Button>
                 </Card.Body>
             </Card>
         )
@@ -74,7 +84,7 @@ function OneProduct() {
 
     if (error) return errorMessage();
     if (product === undefined) return loading();
-    return product.id !== parseInt(params.id)
+    return product.id !== parseInt(params.id) ? loading() : productCard();
 
 }
 
