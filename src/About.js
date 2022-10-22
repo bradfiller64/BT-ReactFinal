@@ -1,6 +1,7 @@
 import AboutPic from './images/about.jpg'
 import './styles/About.css'
 
+
 function About() {
     return (
         <div id="container">

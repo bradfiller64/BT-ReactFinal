@@ -1,6 +1,7 @@
-/* .card-container {
+.Stack {
     display: flex;
+    gap: 50px;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: auto;
-} */
+}

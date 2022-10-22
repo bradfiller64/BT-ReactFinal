@@ -100,11 +100,13 @@ function CreateProduct() {
                             aria-label="Is this product used?"
 
 
-                        />
+                        >
 
-                        <option>Select Option</option>
-                        <option value={true}>Yes</option>
-                        <option value={false}>No</option>
+                            <option>Select Option</option>
+                            <option value={true}>Yes</option>
+                            <option value={false}>No</option>
+
+                        </Form.Select>
 
                     </Form.Group>
                     <Button type="submit">Save</Button>

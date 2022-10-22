@@ -3,9 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Stack from 'react-bootstrap/Stack';
 import Button from 'react-bootstrap/Button';
-import { Form, Link, Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
+import Form from 'react-bootstrap/Form';
 import Logo from './images/logo.jpg';
 import './styles/Home.css'
+
 
 function Home() {
     return (
@@ -28,11 +30,11 @@ function Home() {
                         <Link to='/products' className='nav-link'>
                             Products
                         </Link>
-                        <Link to="/create-product" className="nav-Link">
+                        <Link to='/create-product' className='nav-link'>
                             New Product
                         </Link>
                     </Nav>
-                    {/* <Form className="d-flex">
+                    <Form className="d-flex">
                         <Form.Control
                             type="search"
                             placeholder="Search"
@@ -40,7 +42,7 @@ function Home() {
                             aria-label="Search"
                         />
                         <Button variant="primary">Search</Button>
-                    </Form> */}
+                    </Form>
                 </Container>
             </Navbar>
             <Stack gap={3} className='col-md-10 mx-auto mt-3'>

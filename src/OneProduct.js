@@ -2,8 +2,9 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Card, Button, Spinner, Alert } from 'react-bootstrap'
 import { useParams, useNavigate, Link } from "react-router-dom"
 import ProductContext from './ProductContext.js'
-
 import './styles/OneProduct.css'
+
+
 
 
 function OneProduct() {
