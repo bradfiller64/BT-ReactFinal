@@ -16,7 +16,7 @@ export const ProductProvider = (props) => {
     }, []);
 
     async function refreshProducts() {
-        const response = await axios.get(`${url}`);
+        const response = await axios.get(url);
         setProducts(response.data);
     }
 
@@ -33,7 +33,7 @@ export const ProductProvider = (props) => {
     }
 
     async function addProduct(product) {
-        const response = await axios.post(`${url}`,
+        const response = await axios.post(url,
             product
         );
         refreshProducts();

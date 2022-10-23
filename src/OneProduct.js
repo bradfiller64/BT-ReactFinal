@@ -23,13 +23,13 @@ function OneProduct() {
         setError(null);
 
         async function fetch() {
-            await getProduct(params.productId)
+            await getProduct(params.id)
                 .then((product) => setProduct(product))
                 .catch((message) => setError(message));
         }
 
         fetch();
-    }, [params.productId, getProduct]);
+    }, [params.id, getProduct]);
 
     function handleDeleteProduct(id) {
         deleteProduct(id);
@@ -71,13 +71,15 @@ function OneProduct() {
                         <br></br>
                         <strong>Condition:</strong> <span style={{ color: "white" }}>{condition}</span>
                     </Card.Text>
-                    <Link to={`/products/${id}/edit`} className='btn btn-primary mx-3'>
-                        Edit
-                    </Link>
-                    <Link to={`/products/${id}`} className='btn btn-secondary mx-3'>
+                    <Link to={`/products/${id}`} className='btn btn-secondary'>
                         View
                     </Link>
-                    <Button variant='danger' onClick={handleDeleteProduct.bind(this, id)}>Delete</Button>
+                    <Link to={`/products/${id}/edit`} style={{ margin: '10px' }} className='btn btn-primary'>
+                        Edit
+                    </Link>
+                    <Button variant='danger' onClick={handleDeleteProduct.bind(this, id)}>
+                        Delete
+                    </Button>
                 </Card.Body>
             </Card>
         )

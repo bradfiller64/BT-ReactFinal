@@ -103,8 +103,8 @@ function CreateProduct() {
                         >
 
                             <option>Select Option</option>
-                            <option value={true}>Yes</option>
-                            <option value={false}>No</option>
+                            <option>New</option>
+                            <option>Used</option>
 
                         </Form.Select>
 

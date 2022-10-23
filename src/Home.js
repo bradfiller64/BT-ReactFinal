@@ -34,6 +34,7 @@ function Home() {
                             New Product
                         </Link>
                     </Nav>
+                    <SearchBar />
                     <Form className="d-flex">
                         <Form.Control
                             type="search"
