@@ -20,7 +20,7 @@
       "id": 3,
       "productName": "Nintendo 64",
       "description": "Comes with compatible controller, basic AV cables and power supply.",
-      "price": 129.99,
+      "price": "119.99",
       "imageURL": "https://m.media-amazon.com/images/I/31cqu8h69+L._SX342_SY445_.jpg",
       "condition": "Used"
     },

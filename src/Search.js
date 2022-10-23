@@ -53,7 +53,7 @@ function Search() {
                                             <br></br>
                                             <strong>Condition:</strong> <span style={{ color: "white" }}>{condition}</span>
                                         </Card.Text>
-                                        <Link to={`/products/${id}`} className='btn btn-secondary'>
+                                        <Link to={`/products/${id}`} className='btn btn-success'>
                                             View
                                         </Link>
                                         <Link to={`/products/${id}/edit`} style={{ margin: '10px' }} className='btn btn-primary'>
