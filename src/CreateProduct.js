@@ -4,10 +4,12 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ProductContext } from './ProductContext';
 
+
 function CreateProduct() {
     let params = useParams();
+
     let [product, setProduct] = useState({
-        id: params.productId,
+        id: params.id,
         productName: '',
         description: '',
         price: 0,
@@ -23,6 +25,7 @@ function CreateProduct() {
 
     useEffect(() => {
         if (id === undefined) return;
+
         async function fetch() {
             await getProduct(id).then((product) => setProduct(product));
         }
@@ -30,8 +33,11 @@ function CreateProduct() {
     }, [id]);
 
     function handleChange(event) {
-        setProduct((preValue) => {
-            return { ...preValue, [event.target.name]: event.target.value };
+        setProduct((prevalue) => {
+            return {
+                ...prevalue,
+                [event.target.name]: event.target.value,
+            };
         });
     }
 
@@ -45,7 +51,8 @@ function CreateProduct() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        addOrUpdate().then((product) => navigate(`/products/${product.id}`));
+
+        addOrUpdate().then(() => navigate(`/products`));
     }
 
     function handleCondition(event) {
@@ -56,7 +63,8 @@ function CreateProduct() {
     return (
         <div>
             <h1>Create New Product</h1>
-            <div className="new-product-form">
+            <br></br>
+            <div className="create-new-product">
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3">
                         <Form.Label>Product Name</Form.Label>
@@ -97,14 +105,13 @@ function CreateProduct() {
                     <Form.Group className="mb-3">
                         <Form.Label>Condition</Form.Label>
                         <Form.Select style={{ width: "400px", margin: "auto" }} onChange={handleCondition}
-                            aria-label="Is this product used?"
-
-
+                            name="condition"
+                            aria-label="Is this product New or Used?"
                         >
 
-                            <option>Select Option</option>
-                            <option>New</option>
-                            <option>Used</option>
+                            <option style={{ color: 'black' }}>Select Option</option>
+                            <option style={{ color: 'black' }}>New</option>
+                            <option style={{ color: 'black' }}>Used</option>
 
                         </Form.Select>
 

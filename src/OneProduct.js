@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Card, Button, Spinner, Alert } from 'react-bootstrap'
 import { useParams, useNavigate, Link } from "react-router-dom"
-import ProductContext from './ProductContext.js'
+import { ProductContext } from './ProductContext.js'
 import './styles/OneProduct.css'
 
 
@@ -56,8 +56,8 @@ function OneProduct() {
         let { id, productName, description, price, imageURL, condition } = product;
         return (
 
-            <Card className="align-self=start w-25">
-                <Card.Img variant="top" src={imageURL} />
+            <Card className="align-self=start w-25" bg='dark' border='success'>
+                <Card.Img variant="top" src={imageURL} id='cardImg' />
                 <Card.Body>
                     <Card.Title>{productName}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">

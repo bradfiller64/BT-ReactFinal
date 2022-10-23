@@ -1,9 +1,17 @@
 .card-container {
     display: flex;
-    width: 300px;
-    height: 300px;
     gap: 50px;
-    justify-content: space-between;
     flex-wrap: wrap;
-    margin: auto;
+
+}
+
+#cardImg {
+    height: 22rem;
+    width: 100%;
+}
+
+.card {
+    margin-bottom: 3rem;
+    width: 18rem;
+    height: auto;
 }

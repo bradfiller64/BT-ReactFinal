@@ -1,11 +1,17 @@
 .card-container {
     display: flex;
-    gap: 50px;
-    width: 300px;
-    height: 300px;
-    justify-content: space-between;
-    /* flex-direction: column; */
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    align-items: flex-start;
-    margin: auto;
+}
+
+#cardImg {
+    height: 22rem;
+    width: 100%;
+}
+
+.card {
+    margin-bottom: 3rem;
+    width: 18rem;
+    height: auto;
+    background-color: black;
 }

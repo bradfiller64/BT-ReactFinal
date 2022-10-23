@@ -3,7 +3,7 @@
     {
       "id": 1,
       "productName": "Nintendo Switch",
-      "description": "",
+      "description": "Nintendo's latest and greatest home console",
       "price": 299.99,
       "imageURL": "https://m.media-amazon.com/images/I/61-PblYntsL.__AC_SY300_SX300_QL70_FMwebp_.jpg",
       "condition": "New"
@@ -14,7 +14,7 @@
       "description": "Includes AV Cable, Power Cable, One Controller, and System.",
       "price": 99.99,
       "imageURL": "https://m.media-amazon.com/images/I/61fCEvJAG0L._SX522_.jpg",
-      "condition": "false"
+      "condition": "New"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "description": "Comes with compatible controller, basic AV cables and power supply.",
       "price": 129.99,
       "imageURL": "https://m.media-amazon.com/images/I/31cqu8h69+L._SX342_SY445_.jpg",
-      "condition": "false"
+      "condition": "Used"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "description": "Includes AC adapter, TV hookup, and 2 compatible controllers.",
       "price": 109.99,
       "imageURL": "https://m.media-amazon.com/images/I/81CxedzuzXL._AC_UY218_.jpg",
-      "condition": "false"
+      "condition": "Used"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "description": "Includes Charger",
       "price": 99.99,
       "imageURL": "https://m.media-amazon.com/images/I/41fLurGbKDL._AC_UY218_.jpg",
-      "condition": "false"
+      "condition": "Used"
     },
     {
       "id": 6,
@@ -62,7 +62,7 @@
       "description": "RPG",
       "price": 99.99,
       "imageURL": "https://m.media-amazon.com/images/I/61Q05FCGB9L._SY445_.jpg",
-      "condition": "false"
+      "condition": "Used"
     },
     {
       "id": 9,
@@ -70,7 +70,7 @@
       "description": "Tactical RPG",
       "price": 129.99,
       "imageURL": "https://m.media-amazon.com/images/I/51H881W9W1L._SY445_.jpg",
-      "condition": "false"
+      "condition": "Used"
     },
     {
       "id": 10,
@@ -78,7 +78,7 @@
       "description": "Platformer, Adventure",
       "price": 29.99,
       "imageURL": "https://m.media-amazon.com/images/I/61wnp2P14BL._SL1500_.jpg",
-      "condition": "false"
+      "condition": "Used"
     },
     {
       "id": 11,
@@ -86,7 +86,7 @@
       "description": "Rail Shooter",
       "price": 19.99,
       "imageURL": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQfDzN1T3lgyuskUIYx1DPK49w82YfUSbxxnPTZ2ZwCLqJFhYOkwEr7pZwR6k1M5zfW382Jg4sqL1ZSRtdAZERTUBLKxy68z_gZ_WjAjdSgqIeNIztYXLhd&usqp=CAE",
-      "condition": "false"
+      "condition": "Used"
     },
     {
       "id": 12,
@@ -94,7 +94,7 @@
       "description": "RPG, Action-Adventure",
       "price": 29.99,
       "imageURL": "https://m.media-amazon.com/images/I/41HVkdb0QXL._AC_UY218_.jpg",
-      "condition": "false"
+      "condition": "Used"
     },
     {
       "id": 13,
@@ -102,7 +102,7 @@
       "description": "Platformer",
       "price": 14.99,
       "imageURL": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTamDD4mXIQda01TgvCVLWsLdv-y1gdDBNSoDBQjQlBA67ZjQYvnA7rtJGrjbmXz5cWfQcfcxd-Va2ZvG2VnYHFdv4A2FyQkeTOZFMCJg5eP-atu7t94MzMEQ&usqp=CAE",
-      "condition": "false"
+      "condition": "Used"
     },
     {
       "id": 14,
@@ -110,7 +110,7 @@
       "description": "RPG, Action-Adventure",
       "price": 39.99,
       "imageURL": "https://m.media-amazon.com/images/I/61DSRO2b0uL._SX425_.jpg",
-      "condition": "false"
+      "condition": "Used"
     },
     {
       "id": 15,
@@ -118,7 +118,7 @@
       "description": "Tactical RPG",
       "price": 79.99,
       "imageURL": "https://m.media-amazon.com/images/I/61335tR2gTL._SX425_.jpg",
-      "condition": "false"
+      "condition": "Used"
     }
   ]
 }

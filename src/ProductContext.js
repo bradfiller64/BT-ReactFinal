@@ -23,7 +23,10 @@ export const ProductProvider = (props) => {
     async function getProduct(id) {
         return axios
             .get(`${url}/${id}`)
-            .then((response) => new Promise((resolve) => resolve(response.data)));
+            .then((response) => new Promise((resolve) => resolve(response.data)))
+            .catch(
+                (error) => new Promise((_, reject) => reject(error.response.statusText))
+            );
     }
 
     async function deleteProduct(id) {
@@ -62,5 +65,3 @@ export const ProductProvider = (props) => {
         </ProductContext.Provider>
     );
 };
-
-export default ProductContext;

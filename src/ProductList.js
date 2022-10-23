@@ -34,13 +34,14 @@ function ProductList() {
                                 }) => {
                                     return (
                                         <div key={id}>
-                                            <Card>
+                                            <Card bg='dark' border='success' >
                                                 <Card.Img id='cardImg' variant='top' src={imageURL} />
                                                 <Card.Body>
                                                     <Card.Title>{productName}</Card.Title>
                                                     <Card.Subtitle className='mb-2 text-muted'>
                                                         <span style={{ color: "white" }}>${price}</span>
                                                     </Card.Subtitle>
+                                                    <br></br>
                                                     <Card.Text>
                                                         <strong>Description:</strong> <span style={{ color: "white" }}>{description}</span>
                                                     </Card.Text>
